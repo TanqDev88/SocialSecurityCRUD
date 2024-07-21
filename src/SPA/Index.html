@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>SPA - Simple Page App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+    <body class="bg-gray-800 text-white">
+        <div id="nav" " >
+            Hola
+        </div>
+        
+        <main>
+            <div id="tabla-container">
+                <table id="tabla-datos" class="min-w-full divide-y divide-gray-200 mb-10">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Empresa</th>
+                      <th>Código</th>
+                      <th>Obra Social</th>
+                      <th>Afiliado</th>
+                      <th>DNI</th>
+                      <th>Precio</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gray-200">
+                    <!-- En este lugar se agregan las filas de datos -->
+                  </tbody>
+
+                </table>
+
+
+              </div>
+              
+              <button onclick="cargarDatos()" class="bg-blue-500 hover:bg-blue-700 font-bold py-1 px-2 mb-10 rounded">Cargar Datos</button>
+        
+        </main>
+
+        <footer>
+          <p>Primer punto del examen.</p>
+          <br/>
+          Copyright &copy; 2023
+        </footer>
+        <script src="ajax.js"></script>
+    </body>
+</html>
