@@ -15,7 +15,6 @@ const CrudComponent = () => {
     precio: 0
   });
 
-  // función que llama a la API: 
   const fetchData = async () => {
     try {
       const response = await axios.get('https://localhost:44324/api/ambulancia');
@@ -27,14 +26,12 @@ const CrudComponent = () => {
     }
   };
 
-  // función getAll: 
   const getAll = async () => {
     const data = await fetchData();
-   
+  
     setItems(data);  
   }
 
-  // función POST ---------------------
   
   const handleInputChange = (e) => {
     setNewItem({
@@ -46,9 +43,7 @@ const CrudComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Actualizar la lista de items después de crear uno nuevo
       await getAll();
-      // Limpiar el formulario
       setNewItem({
         empresa: '',
         codigo: '',
@@ -62,13 +57,10 @@ const CrudComponent = () => {
     }
   };
 
-  // FUNCION DELETE ------------
 
   const deleteItem = async (itemId) => {
     try {
-      // Realizar la solicitud DELETE al servidor
       await axios.delete(`https://localhost:44324/api/ambulancia/${itemId}`);
-      // Volver a cargar los datos después de eliminar
       await getAll();
     } catch (error) {
       console.error(error);
@@ -103,18 +95,18 @@ const CrudComponent = () => {
                 </div>
                 
             ))}
-           
+          
         </div>
 
         <CreateItem
             newItem={newItem}
             handleInputChange={handleInputChange}
-            handleSubmit={(e) => handleSubmit(e, newItem)} // Pasa el nuevo item como parámetro
+            handleSubmit={(e) => handleSubmit(e, newItem)} 
         />
 
         <UpdateItem />
 
-     
+    
     </div>
   );
 };

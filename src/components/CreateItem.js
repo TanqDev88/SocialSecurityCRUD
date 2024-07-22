@@ -8,9 +8,7 @@ export const CreateItem = ({ newItem, handleInputChange }) => {
         e.preventDefault();
     
         try {
-          // Realizar la solicitud POST al servidor
           await axios.post('https://localhost:44324/api/ambulancia', newItem);
-          // Limpiar el formulario
           handleInputChange({
             target: { name: 'empresa', value: '' }
           });

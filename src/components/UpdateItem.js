@@ -21,14 +21,11 @@ const UpdateItem = ({ itemId, handleUpdateSuccess }) => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Realizar la solicitud PUT al servidor para actualizar el elemento
       await axios.put(
         `https://localhost:44324/api/ambulancia/${itemId}`,
         updatedItem
       );
-      // Llamar a la función de éxito de actualización proporcionada por el componente padre
       handleUpdateSuccess();
-      // Limpiar el formulario
       setUpdatedItem({
         id: 0,
         empresa: '',

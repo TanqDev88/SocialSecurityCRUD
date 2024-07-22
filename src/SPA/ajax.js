@@ -2,10 +2,8 @@
 function cargarDatos() {
     let peticion = new XMLHttpRequest();
   
-    // Config
     peticion.open('get', 'https://localhost:44324/api/ambulancia', true);
   
-    // Estados 2, 3, 4
   
     peticion.addEventListener('load', () => {
       console.log(peticion.readyState)
@@ -19,11 +17,10 @@ function cargarDatos() {
     peticion.send();
 }
 
-  // funcion Cargar datos -------------------------------------------------
   
   function mostrarDatos(datos) {
     var tbody = document.querySelector('#tabla-datos tbody');
-    tbody.innerHTML = ''; // Limpiar el contenido existente
+    tbody.innerHTML = ''; 
   
     datos.forEach(function (dato) {
       var fila = document.createElement('tr');
@@ -43,11 +40,6 @@ function cargarDatos() {
   }
 
 
-/* peticion.addEventListener('readystatechange', () => {
-    console.log(peticion.readyState)
-    if(peticion.readyState == 4){
-        console.log(peticion.response);
-    }
-}) */
+
 
 
