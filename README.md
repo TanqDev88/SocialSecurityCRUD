@@ -2,7 +2,9 @@
   <p align="center">Social security app</p>
 </h1>
 
-![Image text](https://github.com/TanqDev88/SocialSecurityCRUD/blob/main/Crud.png)
+<p align="center">
+  <img src="https://github.com/TanqDev88/SocialSecurityCRUD/blob/main/Crud.png" alt="Image text">
+</p>
 
 ## Description
 To run the app from the API with AJAX and React run the npm install and npm start commands.
